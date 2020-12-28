@@ -1,0 +1,112 @@
+
+
+/* reset formatting */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general formatting for page */
+body{
+    background-image: linear-gradient(120deg, #36D1DC, #5B86E5);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background:white;
+}
+
+/*form button styling*/
+form button{
+    color: #5B86E5;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #5B86E5;
+    color: white;
+}
+
+/* todo list styling */
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+/* pushes buttons to the end */
+.todo li{
+    flex: 1;
+}
+
+.complete-btn{
+    background: green;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size:1rem;
+}
+
+.trash-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size:1rem;
+}
+
+/* add padding to items added */
+/* makes them not stick the sides */
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+/* removes issue of clicking on trash and check icons */
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+/* adds strikethrough and fade for completed items */
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
